@@ -2,7 +2,8 @@ package ru.netology.manager;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.netology.TicketRepository;
+import ru.netology.domain.TicketByTimeFlightAscComparator;
+import ru.netology.repository.TicketRepository;
 import ru.netology.domain.Ticket;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -44,6 +45,16 @@ public class TicketManagerTest {
 
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    void shouldFindTicketByTimeFlightAscComparator(){
+        Ticket[] expected = {ticket2, ticket4};
+        Ticket[] actual = manager.findAll("airport3", "airport4", new TicketByTimeFlightAscComparator());
+
+        assertArrayEquals(expected, actual);
+
+    }
+
 
 }
 
