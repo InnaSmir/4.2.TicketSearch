@@ -1,6 +1,6 @@
 package ru.netology.manager;
 
-import ru.netology.TicketRepository;
+import ru.netology.repository.TicketRepository;
 import ru.netology.domain.Ticket;
 
 import java.util.Arrays;

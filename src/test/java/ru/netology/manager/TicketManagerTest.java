@@ -2,7 +2,7 @@ package ru.netology.manager;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.netology.TicketRepository;
+import ru.netology.repository.TicketRepository;
 import ru.netology.domain.Ticket;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
