@@ -12,11 +12,12 @@ public class TicketManager {
 
         this.repository = repository;
     }
+
      public void add(Ticket ticket) {
+
         repository.save(ticket);
      }
-
-
+     
      public Ticket[] findAll(String from, String to) {
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : repository.findAll()) {
