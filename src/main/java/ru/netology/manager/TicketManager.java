@@ -19,7 +19,12 @@ public class TicketManager {
         repository.save(ticket);
      }
 
+
     public Ticket[] findAll(String from, String to) {
+
+     
+     public Ticket[] findAll(String from, String to) {
+
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : repository.findAll()) {
             if (ticket.getAirportFrom().equals(from) && ticket.getAirportTo().equals(to)) {
